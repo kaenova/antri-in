@@ -11,7 +11,7 @@ import Modal, { DefaultModalData } from "../modal/Modal";
 function InformationAntrian() {
   const cookie = new Cookies();
   const token = cookie.get("token_admin");
-  const role = "";
+  let role = "";
   if (token) {
     role = JSON.parse(atob(token.split(".")[1]))["role"];
   }

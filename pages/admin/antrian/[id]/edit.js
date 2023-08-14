@@ -15,7 +15,7 @@ function EditAntrian() {
     const cookie = new Cookies();
     const dispatch = useDispatch(selectToast)
     const token = cookie.get("token_admin")
-    const role = ""
+    let role = ""
     if (token) {
         role = JSON.parse(atob(token.split('.')[1]))["role"]
     }

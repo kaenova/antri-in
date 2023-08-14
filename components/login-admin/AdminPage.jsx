@@ -17,7 +17,7 @@ function Adminpage() {
   let config = {
     headers: { Authorization: `Bearer ${token}` }
   }
-  const role = ""
+  let role = ""
   if (token) {
     role = JSON.parse(atob(token.split('.')[1]))["role"]
   }

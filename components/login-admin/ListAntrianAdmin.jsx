@@ -14,7 +14,7 @@ function ListAntrianAdmin(props) {
     const router = useRouter();
     const cookie = new Cookies();
     let token = cookie.get("token_admin");
-    const role = "";
+    let role = "";
     if (token) {
         role = JSON.parse(atob(token.split(".")[1]))["role"];
     }
